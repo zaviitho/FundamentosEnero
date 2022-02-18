@@ -1,8 +1,565 @@
 :root{
-    --main-color:#24263; 
+    --main-color:#1F1D2C;
+    --accent-color:#F1A600; 
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color:var(--main-color) ;
+    color:white;
+    font-family: 'Inter', sans-serif;
+    background-image: url("../assets/Vectores/Rectangle\ 34.svg");
+    background-repeat: no-repeat;
+    background-position:right top;
+}
+
+    
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: .5rem 1.25rem;
+    background-color: transparent;
+    height: 50px;
+}
+nav>div img{
+    width: 24px;
+}
+
+input#menu-hamburguesa{
+    visibility: hidden;
+}
+
+input#menu-hamburguesa~ul{
+    background-color: tomato;
+    width: 100%;
+    list-style: none;
+    height: 100%;
+    position: absolute;
+    right: 100%;
+    transition: all 300ms linear;
+    z-index: 100;
+
+
+
+}
+
+ul>li a{
+    text-decoration: none;
+    padding: 2rem;
+    margin-bottom:1rem;
+}
+ul>li{
+    padding: 1rem;
+}
+
+input#menu-hamburguesa:checked ~ul{
+    right: 0;
+}
+
+div ul li :checked +ul{
+    right: 50%;
+}
+#about-section{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.25rem;
+}
+#about-section>div{
+    position: absolute;
+    left: 0;
+    padding: 0 1.25rem;
+}
+
+#about-section >h1{
+    font-size: 50px;
+    font-weight:600 ;
+}
+
+
+
+#about-section h1+p{
+    font-size: 18px;
+}
+
+#about-section p>span{
+    color: var(--accent-color);
+}
+
+.social-icon-wrapper{
+    margin-top: 1rem;
+}
+.social-icon-wrapper>.icon{
+    margin-right: 1rem;
+}
+
+#personal-info-section{
+    background-image: url("../assets/Vectores/Rectangle\ 33.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding:1rem;
+}
+
+h2{
+    font-size:18px;
+    font-weight:600;
+}
+p{
+    font-weight: 50;
+}
+img{
+    border-radius: 1rem;
+}
+
+.academic-wrapper{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.academic-card> img{
+    width:40%;
+}
+#experience{
+    text-align:center;
+    padding: 3rem;
+    background-image: url("../assets/Vectores/Group\ 35.svg");
+    background-repeat: no-repeat;
+    background-size: 50px 350px;
+    background-position:  330px 90px;
+}
+
+#experience>h2{
+    margin-bottom: 1rem;
+}
+
+.experience-wrapper div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 1rem;
+}
+
+#skills{
+    text-align:center;
+    background-image: url("../assets/Vectores/Rectangle\ 33.svg");
+    background-position: left top;
+    background-size:contain;
+    background-repeat: no-repeat;
+    padding-top:3rem;
+    padding-bottom: 3rem;
+}
+#skills>h2{
+    padding-bottom:  1rem;
+}
+
+.skills-wrapper{
+    display: inline-block;
+
+}
+.skills-card{
+    
+    padding:0.5rem;
+}
+.skills-card>h2{
+    display: inline-block;
+    color: var(--accent-color);
+    position: absolute;
+    left:20px;
+}
+.skills-card>p{
+    font-weight: 200;
+}
+
+#portafolio{
+    text-align: center;
+    padding:2rem 0 2rem 0;
+    width: 100%;
+}
+.skills-card>div{
+    display: inline-block;
+    width: 70%;
+}
+
+.card-portafolio{
+    object-fit:contain;
+    
+}
+.card-portafolio img{
+    width: 60%;
+    padding: 1rem;
+}
+
+#caja1{
+    position: relative;
+    left:-20%;
+}
+#caja1 img{
+    border:1rem solid var(--accent-color);
+    padding: 0;
+    border-radius:0  
+}
+#caja2{
+    position: relative;
+    left:20%;
+}
+#caja2 img{
+    border:1rem solid var(--accent-color);
+    padding: 0;
+    border-radius:0  
+}
+#caja3{
+    position: relative;
+    left:-20%;
+}
+
+#caja3 img{
+    border:1rem solid var(--accent-color);
+    padding: 0;
+    border-radius:0  
+}
+
+#contacto{
+    text-align: center;
+    align-items: center;
+    background-image: url(../assets/Vectores/Rectangle\ 34.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding: 2rem;
+}
+
+.contacto-wrapper{
+    display:flex;
+    justify-content: flex-end;
+    position: relative;
+    left:-10px;
+}
+.celular{
+    padding: .5rem;
+}
+.email{
+    padding:.5rem;
+}
+
+footer {
+    padding:2rem;
+    text-align: center;
+    align-items: center;
+}
+
+/*
+desktop version
+*/
+
+@media screen and (min-width: 768px){
+    nav ul{
+        display:flex;
+        flex-direction:row;
+    }
+
+    label{
+        visibility: hidden;
+    }
+
+    input#menu-hamburguesa~ul{
+        right: 0;
+        background-color: var(--main-color);
+        position: relative; 
+    }
+
+    #about-section{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1.25rem;
+        position: relative;
+        left: 20%;
+    }
+    #about-section>div{
+        position: absolute;
+        left: 0;
+        padding: 0 1.25rem;
+    }
+    #about-section h1{
+        font-size: 100px;
+    }
+    #about-section p{
+        font-size: 50px;
+    }
+    #about-section img{
+        position: relative;
+        top:120px;
+    }
+
+    #personal-info-section{
+        position: relative;
+        top:120px;
+        
+    }
+
+    #experience{
+        position: relative;
+        top:120px;
+        left: 80px;
+        background-position:  1100px 90px;
+
+    }
+    .experience-wrapper div{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding: 1rem;
+    }
+
+    #skills{
+        position: relative;
+        top:120px;
+        left: 120px;
+    }
+    #portafolio{
+        position: relative;
+        top:120px;
+        right:-220px;
+        
+    }
+    #portafolio>h2{
+        text-align: center;
+        align-items: center;
+        padding: 3rem;
+        position: relative;
+        left: -12%;
+    }
+
+    #portafolio .card-portafolio{
+        width:65%;
+    }
+
+    #contacto{
+        position: relative;
+        top:120px;
+    }
+    .contacto-wrapper{
+        display:flex;
+        justify-content: flex-end;
+    }
+    #contacto .contacto-wrapper{
+        position: relative;
+        left: -40%;
+    }
+    footer{
+        position: relative;
+        top:120px;
+    }
+
+}
+
+@media screen and (min-width: 600px){
+    nav{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: .5rem 1.25rem;
+        background-color: transparent;
+        height: 50px;
+    }
+    nav>div img{
+        width: 24px;
+    }
+    
+
+    #about-section{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1.25rem;
+        position: relative;
+        left: 3%;
+    }
+    #about-section>div{
+        position: absolute;
+        left: 0;
+        padding: 0 1.25rem;
+    }
+    #about-section h1{
+        font-size: 100px;
+    }
+    #about-section p{
+        font-size: 50px;
+    }
+    #about-section img{
+        position: relative;
+        top:120px;
+        left:20%;
+    }
+
+    #personal-info-section{
+        position: relative;
+        top:120px;
+        
+    }
+
+    #experience{
+        position: relative;
+        top:120px;
+        left: 2%;
+        background-position:  1100px 90px;
+
+    }
+    .experience-wrapper div{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding: 1rem;
+    }
+
+    #skills{
+        position: relative;
+        top:120px;
+        left: 6%;
+    }
+    #portafolio{
+        position: relative;
+        top:120px;
+        right:-17%;
+        
+    }
+    #portafolio h2{
+        text-align: center;
+        align-items: center;
+        padding: 3rem;
+        position: relative;
+        right: 6rem;
+    }
+
+    #portafolio .card-portafolio{
+        width:65%;
+    }
+
+    #contacto{
+        position: relative;
+        top:120px;
+    }
+    .contacto-wrapper{
+        display:flex;
+        justify-content: flex-end;
+        position: relative;
+        left:-25%;
+    }
+
+    footer{
+        position: relative;
+        top:120px;
+    }
+
+}
+
+@media screen and (min-width: 900px){
+    nav{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: .5rem 1.25rem;
+        background-color: transparent;
+        height: 50px;
+    }
+    nav>div img{
+        width: 24px;
+    }
+    
+
+    #about-section{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem;
+        position: relative;
+        left: 25%;
+        
+    }
+    #about-section>div{
+        position: absolute;
+        
+        left: 0;
+        padding: 0 1.25rem;
+    }
+    #about-section h1{
+        font-size: 100px;
+    }
+    #about-section p{
+        font-size: 50px;
+    }
+    #about-section img{
+        position: relative;
+        top:120px;
+        left:30%;
+    }
+
+    #personal-info-section{
+        position: relative;
+        top:120px;
+        
+    }
+
+    #experience{
+        position: relative;
+        top:120px;
+        left: 2%;
+        background-position:  1100px 90px;
+
+    }
+    .experience-wrapper div{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding: 1rem;
+    }
+
+    #skills{
+        position: relative;
+        top:120px;
+        left: 6%;
+    }
+    #portafolio{
+        position: relative;
+        top:120px;
+        right:-17%;
+        
+    }
+    #portafolio h2{
+        text-align: center;
+        align-items: center;
+        padding: 3rem;
+        position: relative;
+        right: 6rem;
+    }
+
+    #portafolio .card-portafolio{
+        width:65%;
+    }
+
+    #contacto{
+        position: relative;
+        top:120px;
+    }
+    .contacto-wrapper{
+        display:flex;
+        justify-content: flex-end;
+        position: relative;
+        
+    }
+
+    footer{
+        position: relative;
+        top:120px;
+    }
+
+}
+
