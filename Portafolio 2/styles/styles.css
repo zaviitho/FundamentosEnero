@@ -7,7 +7,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+ul li a{
+    color: #FFFFFF;
+}
 body{
     background-color:var(--main-color) ;
     color:white;
@@ -513,7 +515,7 @@ desktop version
         position: relative;
         top:120px;
         left: 2%;
-        background-position:  1100px 90px;
+        background-position:  1300px 90px;
 
     }
     .experience-wrapper div{
@@ -527,22 +529,29 @@ desktop version
         top:120px;
         left: 6%;
     }
+
+    #container>#portafolio{
+        width: 100%;
+    }
     #portafolio{
         position: relative;
         top:120px;
-        right:-17%;
-        
+        width: 100%;
+        left:-1%;
     }
     #portafolio h2{
         text-align: center;
         align-items: center;
         padding: 3rem;
         position: relative;
-        right: 6rem;
+        left: 7%;
     }
 
     #portafolio .card-portafolio{
-        width:65%;
+        width:40%;
+        margin:0 auto;
+        display:inline-block;
+        
     }
 
     #contacto{
